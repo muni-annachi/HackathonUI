@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   persona:Persona;
   error: any;
   outPut1:JSON;
+  outputImage:string;
   constructor(private apiService: ApiService) { }
  
   ngOnInit() {
@@ -30,16 +31,25 @@ export class AppComponent implements OnInit {
    
     
     this.apiService.postPersona(this.persona).subscribe(data => {
-      console.log(".... data"+data);
+      console.log(".... dat2222a"+data);
       data=data.replace("'","\"");
       data=data.replace("'","\"");
       console.log(".... data"+data);
       this.outPut1=JSON.parse(data);
      // console.log(JSON.stringify(data));
       console.log( this.outPut1);
+
       this.output=this.outPut1['MODEL_RESPONSE'];
+      
+
+      this.outputImage = '../assets/images/'+this.output+".png";
+
+      
+      console.log("ouput "+ this.output +" image " + this.outputImage+".png");
+      this.output="Your Persona Code is represented by the following image";
+     
     }, error => (this.error = error)); // TODO: Display error message
   }
- 
+  
 
 }

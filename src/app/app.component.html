@@ -13,7 +13,7 @@
       <div class="card-header">
         <h5 style="color:white">Lets Meetup with your Persona:</h5>
       </div>
-      <div class="card-body">
+      <div class="card-body" >
         <form>
           <div class="input-group form-group">
 
@@ -23,14 +23,21 @@
           <div class=" input-group form-group">
 
             <input type="button" value="Discover Me" class="btn float-right login_btn" (click)="getPersona(input.value)"/>
-          
+            
 
           </div>
+          <div class=" input-group form-group">
 
+            <p style="background-color:powderblue;">{{output}}</p>
+            
+          </div>
+ 
+          
+         
+           &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+           &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; <img class="logo" src="{{outputImage}}">
 
-          <input type="text" style="margin: 30px 0; margin-left: 50px" placeholder="My Persona Code is ..."
-            class="btn float-center" disabled value="{{output}}">
-
+           <!--  <img src="../assets/images/"+{{output}}>-->
 
         </form>
       </div>
